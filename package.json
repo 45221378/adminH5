@@ -4,7 +4,14 @@
     "start": "umi dev",
     "build": "umi build",
     "lint": "eslint --ext .js src test",
-    "precommit": "npm run lint"
+    "format": "prettier --write \"**/*.{js,css,less,md}\"",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,css,less,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "dva": "^2.3.1",
