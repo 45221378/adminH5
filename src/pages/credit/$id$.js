@@ -1,1 +1,1 @@
-export default () => <div>带有id的 Page</div>
+export default () => <div>带有id的 Page</div>;

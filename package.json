@@ -1,8 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "start": "umi dev",
+    "start": "cross-env API_ENV=dev umi server",
     "build": "umi build",
+    "build:test": "cross-env API_ENV=test umi dev",
     "lint": "eslint --ext .js src test",
     "format": "prettier --write \"**/*.{js,css,less,md}\"",
     "precommit": "lint-staged"

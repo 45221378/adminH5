@@ -1,17 +1,17 @@
-let  baseURL;
-switch (process.env.API_ENV){
-  case 'dev':
-    // baseURL = 'http://www.1v1.one:9191/hxj_srv/';
-
-    baseURL = 'http://www.1v1.one:9191/hxj_srv/';
+let baseURL;
+console.log(process.env);
+console.log(process.env.API);
+switch (process.env.API_ENV) {
+  case "dev":
+    baseURL = "http://jsonplaceholder.typicode.com";
     break;
-  case 'test':
-    baseURL = 'http://www.1v1.one:9191/hxj_srv/';
+  case "test":
+    baseURL = "http://jsonplaceholder.typicode.com";
     break;
-  case 'uat':
-    baseURL = 'http://www.1v1.one:1839/hxj_srv/';
+  case "uat":
+    baseURL = "http://jsonplaceholder.typicode.com";
     break;
   default:
-    baseURL = 'http://39.106.112.1/flowService/';
+    baseURL = "http://jsonplaceholder.typicode.com";
 }
 export default baseURL;
