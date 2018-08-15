@@ -23,7 +23,7 @@ export default class Menus extends Component {
         theme={theme}
         mode="inline"
         defaultSelectedKeys={[current]}
-        style={{height: '86vh', overflowx: 'hidden', borderRight: 'none',minWidth:120}}
+        style={{height: '86vh', overflowx: 'hidden', borderRight: 'none'}}
       >
         <Menu.Item key="/">
           <Link to="/"><Icon type="home" /><span>Home</span></Link>

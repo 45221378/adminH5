@@ -90,7 +90,7 @@ class App extends Component {
               /></span>
             </Dropdown>}
           </Header>
-          <Content className={styles.content} style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280,minWidth: 614 }}>
+          <Content className={styles.content}>
             <div>{children}</div>
           </Content>
         </Layout>

@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "cross-env API_ENV=dev umi server",
+    "start": "cross-env API_ENV=dev umi dev",
     "build": "umi build",
     "build:test": "cross-env API_ENV=test umi dev",
     "lint": "eslint --ext .js src test",
