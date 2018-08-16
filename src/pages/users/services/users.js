@@ -1,22 +1,22 @@
 import { PAGE_SIZE } from '../../../constants';
-import request from '../../../utils/request';
+import ajax from '../../../utils/request';
 
 export function fetch({ page = 1 }) {
-  return request(`/users?_page=${page}&_limit=${PAGE_SIZE}`);
+  return ajax.get(`/users?_page=${page}&_limit=${PAGE_SIZE}`);
 }
 export function remove(id) {
-  return request(`/users/${id}`),{
+  return ajax(`/users/${id}`),{
     method: 'DELETE'
   }
 }
 export function patch(id, values) {
-  return request(`/users/${id}`, {
+  return ajax(`/users/${id}`, {
     method: 'PATCH',
     body: JSON.stringify(values),
   });
 }
 export function create(values) {
-  return request('/api/users', {
+  return ajax('/users', {
     method: 'POST',
     body: JSON.stringify(values),
   });

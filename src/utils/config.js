@@ -1,6 +1,6 @@
 let baseURL;
-console.log(process.env);
-console.log(process.env.API);
+// console.log(process.env);
+// console.log(process.env.API);
 switch (process.env.API_ENV) {
   case "dev":
     baseURL = "http://jsonplaceholder.typicode.com";
