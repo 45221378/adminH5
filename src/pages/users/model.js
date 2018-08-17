@@ -5,19 +5,16 @@ export default {
   state: {
     list: [],
     total: null,
-    page:null
+    page: null,
   },
   reducers: {
-    save(state, { payload: { data: list, total,page } }) {
-      console.log(...state);
-      return { ...state, list, total ,page};
+    save(state, { payload: { data: list, total, page } }) {
+      return { ...state, list, total, page };
     },
   },
   effects: {
-    *fetch({ payload: { page=1 } }, { call, put }) {
+    *fetch({ payload: { page = 1 } }, { call, put }) {
       const { data, headers } = yield call(usersService.fetch, { page });
-      console.log(yield call(usersService.fetch, { page }));
-      console.log(data);
       yield put({
         type: 'save',
         payload: {
@@ -27,10 +24,10 @@ export default {
         },
       });
     },
-    *remove({payload:id},{call,put,select}){
+    *remove({ payload: id }, { call, put, select }) {
       yield call(usersService.remove, id);
-      const page = yield select(state=>state.users.page)
-      yield put({type:'fetch',payload:{page}})
+      const page = yield select(state => state.users.page);
+      yield put({ type: 'fetch', payload: { page } });
     },
     *patch({ payload: { id, values } }, { call, put, select }) {
       yield call(usersService.patch, id, values);

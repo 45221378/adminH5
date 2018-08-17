@@ -10,7 +10,6 @@ import UserModal from './UserModal'
 export default class Users extends  Component{
   constructor(props){
     super(props)
-
   }
   deleteHandler=(id)=>{
     const {dispatch} = this.props;

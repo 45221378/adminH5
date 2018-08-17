@@ -37,7 +37,6 @@ class UserEditModal extends Component {
 
   render() {
     const { children } = this.props;
-    console.log(this.props);
     const { getFieldDecorator } = this.props.form;
     const { name, email, website } = this.props.record;
     const formItemLayout = {
