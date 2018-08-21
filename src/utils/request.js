@@ -19,7 +19,7 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default async function request(url, options) {
-  const response = await fetch(baseURL+url, options);
+  const response = await fetch(url, options);
 
   checkStatus(response);
 
